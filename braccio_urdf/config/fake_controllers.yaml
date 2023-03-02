@@ -1,0 +1,17 @@
+controller_list:
+  - name: fake_Braccio_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - base_joint
+      - shoulder_joint
+      - elbow_joint
+      - wrist_pitch_joint
+      - wrist_roll_joint
+  - name: fake_Hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - gripper_joint
+      - sub_gripper_joint
+initial:  # Define initial robot poses per group
+  - group: Braccio_arm
+    pose: rest
